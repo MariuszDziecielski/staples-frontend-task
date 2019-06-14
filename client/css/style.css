@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: normal 17px 'Roboto Condensed', sans-serif;
+  background: rgb(145, 210, 247) no-repeat center/cover;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* PRODUCTS */
+.products,
+.copyright {
+  text-align: center;
+}
+
+/* Media queries */
+/* For computers: */
+@media (max-width: 992px) {
+
+}
+
+/* For tablets: */
+@media (max-width: 768px) {
+
+}
+
+/* For smart phones: */
+@media (max-width: 480px) {
+
+}
