@@ -22,6 +22,10 @@ img {
   text-align: center;
 }
 
+.products .search-box {
+
+}
+
 /* Media queries */
 /* For computers: */
 @media (max-width: 992px) {
