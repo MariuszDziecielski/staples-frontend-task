@@ -118,4 +118,9 @@ $(document).ready(() => {
   })
 
   searchResultElem.add(warningTextElem).hide();
+
+  if ($(window).width() <= 640) {
+    let isTextNode = (_, el) => el.nodeType === Node.TEXT_NODE;
+    $('.pagination a').contents().filter(isTextNode).remove();
+  }
 });
