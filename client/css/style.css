@@ -10,6 +10,11 @@ body {
   font: normal 17px 'Roboto Condensed', sans-serif;
 }
 
+header, .products, .modal, .copyright {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -48,6 +53,23 @@ header .search-box {
 header .search-box input,
 header .search-box button {
   padding: 0 20px;
+}
+
+header .shopping-cart {
+  position: absolute;
+  right: 0;
+  top: 46px;
+}
+
+header .shopping-cart a span {
+  color: white;
+  border-radius: 50%;
+  background-color: red;
+  padding: 4px 9px 4px;
+  font-size: 15px;
+  position: relative;
+  left: -30px;
+  top: -10px;
 }
 
 /* PRODUCTS */
@@ -144,8 +166,16 @@ header .search-box button {
 }
 
 /* PRODUCT DETAIL MODAL */
+.modal .modal-content {
+  padding: 0 20px 20px;
+}
+
 .modal .modal-header {
   flex-direction: column;
+}
+
+.modal .modal-header img {
+  margin: 0 auto 30px;
 }
 
 .modal .modal-header h5 {
@@ -282,14 +312,26 @@ header .search-box button {
   .products .search-results-box {
     margin: 0 20px;
   }
-}
 
-@media (max-width: 479px) {
   header a {
     text-align: center;
     line-height: 41px;
+    padding-top: 30px;
   }
 
+  header .shopping-cart {
+    top: 15px;
+  }
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 900px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 479px) {
   .copyright a {
     display: block;
     margin-top: 10px;

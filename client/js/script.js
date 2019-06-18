@@ -18,7 +18,7 @@ $(document).ready(() => {
           const h2 = `<h2 title='${response[i].general.name}'>${response[i].general.name}</h2>`;
           const p = `<p class='id'>Product ID: ${response[i].id}</p>`;
           const div = $("<div class='add_to_cart'>Number of items: </div>");
-          const input = `<input type='number' name='quantity' min='1' id='' placeholder='1'>`;
+          const input = `<input type='number' name='quantity' min='1' id='' value='1'>`;
           const button = `<button type='button' class='btn btn-danger'>Add To Cart</button>`;
 
           div.append(input, button);
@@ -32,8 +32,19 @@ $(document).ready(() => {
             $('.modal-body p.id span').text(`${response[i].id}`);
             $('.modal-body div.description').html(`${response[i].general.description}`);
             $('#productDetailModal').modal();
-          })
+          });
         }
+
+        let numbOfProdInBask = 0;
+        const inputElems = $('.add_to_cart input');
+        const numbOfProdInBaskElem = $('header .number-of-prods');
+
+        $('.add_to_cart button').click(function () {
+          const inputVal = parseInt($(this).prev().val());
+          numbOfProdInBask += inputVal;
+          numbOfProdInBaskElem.text(numbOfProdInBask);
+          inputElems.val(1);
+        });
       }
     });
   }
