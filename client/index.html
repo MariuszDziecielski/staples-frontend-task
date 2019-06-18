@@ -13,69 +13,85 @@
 </head>
 
 <body>
-  <div class="products">
-    <h1>eCommerce products</h1>
+  <header>
+    <a href="">
+      <span>e</span>Commerce products
+    </a>
     <div class="search-box">
       <form action="#" method="post">
         <div class="search">
-          <input type="text" placeholder="Szukaj...">
-          <button type="submit">Szukaj</button>
+          <input type="text" placeholder="search for products...">
+          <button type="submit">Search</button>
         </div>
       </form>
     </div>
+  </header>
+  <section class="products">
     <div class="search-results-box">
-      <p class="search-results">Znaleziono (<span class="numb-of-prods"></span>) produktów dla zapytania: &ldquo;<span
+      <p class="search-results">Found (<span class="numb-of-prods"></span>) products for query: &ldquo;<span
           class="query"></span>&rdquo;</p>
-      <p class="warning-text">Szukana fraza jest za krótka. Wpisz przynajmniej trzy znaki.</p>
+      <p class="warning-text">The searched phrase is too short. Enter at least three characters.</p>
     </div>
+    <h1>Our products</h1>
     <div class="products-container"></div>
     <div class="pagination">
       <ul>
         <li>
-          <a href="" rel="first">Pierwszy</a>
+          <a href="" rel="first">
+            <img src="images/first_page_icon.png" alt="">First Page
+          </a>
         </li>
         <li>
-          <a href="" rel="prev">Poprzedni</a>
+          <a href="" rel="prev">
+            <img src="images/previous_page_icon.png" alt="">Previous Page</a>
         </li>
         <li>
-          <a href="" rel="next">Następny</a>
+          <a href="" rel="next">
+            Next Page<img src="images/next_page_icon.png" alt="">
+          </a>
         </li>
         <li>
-          <a href="" rel="last">Ostatni</a>
+          <a href="" rel="last">
+            Last Page<img src="images/last_page_icon.png" alt="">
+          </a>
         </li>
       </ul>
     </div>
-  </div>
+  </section>
   <!--PRODUCT DETAIL MODAL-->
-  <div class="modal fade" id="productDetailModal" tabindex="-1" role="dialog" aria-labelledby="productDetailModalLabel"
-    aria-hidden="true">
+  <section class="modal fade" id="productDetailModal" tabindex="-1" role="dialog"
+    aria-labelledby="productDetailModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <img src="" alt="">
-          <h5 class="modal-title" id="productDetailModalLabel"></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
+          <img src="" alt="">
+          <p class='brand'>Brand: <span></span></p>
+          <h5 class="modal-title" id="productDetailModalLabel"></h5>
         </div>
         <div class="modal-body">
-          <p class='id'></p>
+          <p class='id'>Product ID: <span></span></p>
           <div class="description"></div>
-          <p class='brand'></p>
         </div>
-        <div class="modal-footer">
-          <input type='number' name='quantity' min='1' id=''>
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Dodaj</button>
+        <div class="modal-footer add_to_cart">Number of items:
+          <input type='number' name='quantity' min='1' id='' placeholder='1'>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Add To Cart</button>
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <!--PRODUCT DETAIL MODAL-->
-  <div class="copyright">
+  <section class="copyright">
     <p>
-      Copyright &copy; 2019 Mariusz Dzięcielski
+      Copyright <i class="far fa-copyright"></i> 2019
+      <a href="">
+        <span>e</span>Commerce products
+      </a>
     </p>
-  </div>
+  </section>
+  <script src="https://kit.fontawesome.com/eacd14d53e.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"

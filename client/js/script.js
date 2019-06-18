@@ -14,21 +14,23 @@ $(document).ready(() => {
         for (let i = 0; i < response.length; i++) {
           product = $("<div class='product'></div>");
 
-          const img = `<img src='${response[i].images.primary.large}' alt=' '>`;
-          const h2 = `<h2>${response[i].general.name}</h2>`;
-          const p = `<p class='id'>${response[i].id}</p>`;
-          const input = `<input type='number' name='quantity' min='1' id=''>`;
-          const button = `<button>Dodaj</button>`;
+          const img = `<img src='${response[i].images.primary.large}' alt=' ' title='${response[i].general.name}'>`;
+          const h2 = `<h2 title='${response[i].general.name}'>${response[i].general.name}</h2>`;
+          const p = `<p class='id'>Product ID: ${response[i].id}</p>`;
+          const div = $("<div class='add_to_cart'>Number of items: </div>");
+          const input = `<input type='number' name='quantity' min='1' id='' placeholder='1'>`;
+          const button = `<button type='button' class='btn btn-danger'>Add To Cart</button>`;
 
-          product.append(img, h2, p, input, button);
+          div.append(input, button);
+          product.append(img, h2, p, div);
           prodsCont.append(product);
 
-          product.find('img').click(() => {
+          product.find('img, h2').click(() => {
             $('.modal-header img').attr('src', `${response[i].images.primary.large}`);
             $('.modal-header h5').text(`${response[i].general.name}`);
-            $('.modal-body p.id').text(`${response[i].id}`);
+            $('.modal-header p.brand span').text(`${response[i].brand.name}`);
+            $('.modal-body p.id span').text(`${response[i].id}`);
             $('.modal-body div.description').html(`${response[i].general.description}`);
-            $('.modal-body p.brand').text(`${response[i].brand.name}`);
             $('#productDetailModal').modal();
           })
         }

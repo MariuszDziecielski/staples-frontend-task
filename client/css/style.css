@@ -8,12 +8,46 @@ body {
   margin: 0;
   padding: 0;
   font: normal 17px 'Roboto Condensed', sans-serif;
-  background: rgb(145, 210, 247) no-repeat center/cover;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background-color: white;
+}
+
+header a {
+  color: black;
+  font-size: 39px;
+  font-weight: 600;
+}
+
+header a span {
+  color: red;
+  border-radius: 50%;
+  background-color: lightgray;
+  padding: 3px 20px 10px;
+}
+
+header a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+header .search-box {
+  line-height: 48px;
+  padding-left: 20px;
+}
+
+header .search-box input,
+header .search-box button {
+  padding: 0 20px;
 }
 
 /* PRODUCTS */
@@ -22,8 +56,144 @@ img {
   text-align: center;
 }
 
-.products .search-box {
+.products {
+  background-color: #f2f2f2;
+}
 
+.products .search-results-box {
+  padding: 30px 0 0;
+  font-size: 21px;
+}
+
+.products .products-container .product {
+  background-color: white;
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+}
+
+.products .products-container .product img {
+  padding: 10px 10px 43px;
+  cursor: pointer;
+}
+
+.products .products-container .product h2 {
+  cursor: pointer;
+}
+
+.products .products-container .product h2:hover {
+  text-decoration: underline;
+}
+
+.products .products-container .product input,
+.products .products-container .product button {
+  padding: 0 20px;
+  line-height: 48px;
+}
+
+.products .products-container .product input {
+  width: 56px;
+  padding: 0 0 0 13px;
+  position: relative;
+  top: 2px;
+  line-height: 35px;
+  margin-bottom: 20px;
+  margin-left: 6px;
+}
+
+.products .products-container .product button {
+  display: block;
+  margin: 0 auto;
+}
+
+.products h1 {
+  padding: 30px 0 60px;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.products .pagination {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.products .pagination ul {
+  list-style: none;
+  padding: 0
+}
+
+.products .pagination ul li {
+  display: inline-block;
+  padding: 10px 0;
+}
+
+.products .pagination ul li a {
+  padding: 20px 10px;
+  color: #0d0d0d;
+}
+
+.products .pagination ul li a[rel='first'] img,
+.products .pagination ul li a[rel='prev'] img {
+  padding-right: 3px;
+}
+
+.products .pagination ul li a[rel='next'] img,
+.products .pagination ul li a[rel='last'] img {
+  padding-left: 3px;
+}
+
+/* PRODUCT DETAIL MODAL */
+.modal .modal-header {
+  flex-direction: column;
+}
+
+.modal .modal-header h5 {
+  font-weight: 600;
+}
+
+.modal .modal-footer {
+  display: block;
+  margin: 0 auto;
+}
+
+.modal .modal-footer input,
+.modal .modal-footer button {
+  padding: 0 20px;
+  line-height: 48px;
+}
+
+.modal .modal-footer input {
+  width: 56px;
+  padding: 0 0 0 13px;
+  position: relative;
+  top: 2px;
+  line-height: 35px;
+  margin-bottom: 20px;
+  margin-left: 6px;
+}
+
+.modal .modal-footer button {
+  display: block;
+  margin: 0 auto;
+}
+
+/* PRODUCT DETAIL MODAL */
+.copyright {
+  padding: 40px;
+  background-color: white;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: black;
+}
+
+.copyright a span {
+  color: red;
+  border-radius: 50%;
+  background-color: lightgray;
+  padding: 0px 8px 4px;
 }
 
 /* Media queries */
