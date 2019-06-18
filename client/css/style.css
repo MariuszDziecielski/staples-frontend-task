@@ -20,6 +20,7 @@ img {
   height: auto;
 }
 
+/* HEADER */
 header {
   display: flex;
   justify-content: center;
@@ -33,26 +34,16 @@ header a {
   font-weight: 600;
 }
 
-header a span {
-  color: red;
-  border-radius: 50%;
-  background-color: lightgray;
-  padding: 3px 20px 10px;
-}
-
 header a:hover {
   text-decoration: none;
   color: black;
 }
 
-header .search-box {
-  line-height: 48px;
-  padding-left: 20px;
-}
-
-header .search-box input,
-header .search-box button {
-  padding: 0 20px;
+header a span {
+  color: red;
+  border-radius: 50%;
+  background-color: lightgray;
+  padding: 3px 20px 10px;
 }
 
 header .shopping-cart {
@@ -70,6 +61,16 @@ header .shopping-cart a span {
   position: relative;
   left: -30px;
   top: -10px;
+}
+
+header .search-box {
+  line-height: 48px;
+  padding-left: 20px;
+}
+
+header .search-box input,
+header .search-box button {
+  padding: 0 20px;
 }
 
 /* PRODUCTS */
@@ -208,7 +209,7 @@ header .shopping-cart a span {
   margin: 0 auto;
 }
 
-/* PRODUCT DETAIL MODAL */
+/* COPYRIGHT */
 .copyright {
   padding: 40px;
   background-color: white;

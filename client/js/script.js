@@ -119,7 +119,7 @@ $(document).ready(() => {
     }
   }
 
-  showProds(currPage);
+  showProds();
   showPagination();
   udatePagination();
 
